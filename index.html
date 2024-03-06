@@ -1,1 +1,560 @@
-hello
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>RouteExplainer: An Explanation Framework for Vehicle Routing Problem </title>
+  <link rel="icon" type="image/x-icon" href="static/images/route_explainer_icon_small.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script src="https://kit.fontawesome.com/cb74c5ab15.js" crossorigin="anonymous"></script>
+
+  <!-- MathJax -->
+  <script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: { equationNumbers: { autoNumber: "AMS" }},
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      },
+      "HTML-CSS": { matchFontHeight: false },
+      displayAlign: "left",
+      displayIndent: "2em"
+    });
+  </script>
+</head>
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">
+            <p>
+              <img src="static/images/route_explainer_icon_small.png" height="40pt" width="40pt" alt="MY ALT TEXT"/><br>
+              RouteExplainer: An Explanation Framework for Vehicle Routing Problem
+            </p>
+            <p class="tag">
+              <span>#Vehicle Routing Problem</span>
+            </p>
+            <p class="tag">
+              <span>#Explainability</span>
+            </p>
+            <p class="tag">
+              <span>#Counterfactual Explanation</span>
+            </p>
+            <p class="tag">
+              <span>#Large Language Models</span>
+            </p>
+            <p class="is-size-4 publication-venue">
+              <span>PAKDD 2024</span>
+            </p>
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <!-- Paper authors -->
+            <span class="author-block">
+              Daisuke Kikuta*,
+            </span>
+            <span class="author-block">
+              Hiroki Ikeuchi,
+            </span>
+            <span class="author-block">
+              Kengo Tajiri,
+            </span>
+            <span class="author-block">
+              Yuusuke Nakano
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+                NTT Corporation<br>
+                *Contact: 
+                <!-- <a href="#" onclick="event.preventDefault(); navigator.clipboard.writeText('daisuke.kikuta[at]ntt.com').then(function() { alert('Copied email address to clipboard. Please replace [at] with @.'); }, function(err) { alert('Failed to copy: ', err); });">
+                    <i class="fas fa-envelope"></i>
+                </a> -->
+                <a href="mailto:daisuke.kikuta@ntt.com">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                &thinsp;
+                <a href="https://jp.linkedin.com/in/daisuke-kikuta-b454661a2" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                &thinsp;
+                <a href="https://twitter.com/oookiku_rd" target="_blank">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- HF space link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                class="external-link button is-normal is-rounded is-warning">
+                  <span class="icon">
+                    <img src="static/images/hf-logo.svg" alt="Hugging Face" width="24" height="24">
+                  </span>
+                  <span>Demo</span>
+                </a>
+              </span>
+
+              <!-- ArXiv abstract Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- Arxiv PDF link -->
+              <span class="link-block">
+                <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark" onclick="event.preventDefault(); alert('Sorry, this content is still in preparation');">
+                <!-- <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark"> -->
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>PAKDD</span>
+                </a>
+              </span>
+
+              <!-- Github link -->
+              <span class="link-block">
+                <a href="https://github.com/ntt-dkiku/route-explainer" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+
+              <!-- data&checkpoints -->
+              <span class="link-block">
+                <a href="https://github.com/ntt-dkiku/route-explainer" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
+                  </span>
+                  <span>Data & Weights</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <source src="static/images/screenshot_routeexplainer.png"
+         type="video/mp4">
+      </video> -->
+      <img src="static/images/screenshot_routeexplainer.png" alt="RouteExplainer demo">
+      An application demo of RouteExplainer:
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">What is Vehicle Routing Problem (VRP)?</h2>
+        <div class="content has-text-justified">
+          <p>
+            The Vehicle Routing Problem (VRP) is a combinatorial optimization problem that aims to find the optimal routes for a fleet of vehicles to serve customers.
+            Since Dantzig and Ramser <a href="#ref1" class="blue-text">[1]</a> introduced its concept, various VRPs that model real-world problems have been proposed, imposing constraints such as time windows <a href="#ref2" class="blue-text">[2]</a>, vehicle capacity <a href="#ref1" class="blue-text">[1]</a>, and minimum prize <a href="#ref3" class="blue-text">[3]</a>.
+            Concurrently, various solvers have been proposed, ranging from exact solvers <a href="#ref4" class="blue-text">[4]</a> to (meta-)heuristics <a href="#ref5" class="blue-text">[5]</a>, Neural Network (NN) solvers <a href="#ref6" class="blue-text">[6-9]</a>, and their combinations <a href="#ref10" class="blue-text">[10-12]</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Algorithm-->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Why does VRP need explainability?</h2>
+        <div class="content has-text-justified">
+          <p>
+            Conventional solvers such as exact solvers and heuristics inherently possess algorithmic transparency, yet it is difficult to construct interpretable explanations for their outputs summarizing the complicated optimization processes. 
+            On the other hand, NN solvers are naturally black-box methods, and their outputs are not explainable as is.
+            However, in contrast to the success of developing VRPs and their solvers, explainability for VRP still remains unexplored.
+            Here, we argue that explainabilty for VRP is essential for responsible/interactive VRP applications. 
+            In particular, explaning the influence of each edge in a route is significant. 
+            For example, in emergency power supply routing, when asked why a vehicle went rescue to a location instead of other locations at a certain time, 
+            the subsequent influence of the movement (i.e., edge) allows the responsible person to justify the decision. 
+            In interactive tourist route generation, the influence of an edge in a generated route provides hints to tourists who try to modify the edge based on their preferences.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Algorithm -->
+
+<!-- Framework-->
+<section id="section1" class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="pagination">
+          <span class="dot active" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+        
+        <!--  Overview-->
+        <div class="slide active">
+          <span class="slider-navigation-next is-centered" onclick="currentSlide(2)">&thinsp;▶</span>
+          <!-- <span class="slider-navigation-previous is-centered" onclick="currentSlide(3)">◀</span> -->
+          <h2 class="title is-3">Proposed framework: RouteExplainer</h2>
+          <div class="content has-text-justified">
+            <p>
+              We introduce RouteExplainer, the first post-hoc explanation framework for VRP, which explains the influence of each edge in a route with counterfactual explanation.
+              Rethinking a route as the sequence of actions, we extend counterfactual explanation based on the action influence model <a href="#ref13" class="blue-text">[13]</a> to VRP.
+              Given a generated route (i.e., <i>actual route</i>), a user asks a why and why-not question like "why was edge B-C selected at the step, and why not edge B-D?".
+              Here, we call edge B-C <i>actual edge</i> and edge B-D <i>counterfactual (CF) edge</i>. 
+              RouteExplainer takes the actual route and question, and then generates an explanation (answer) for that question as follows: <br>
+              <ol>
+                <li>A VRP solver generates a CF route, which is an alternative route where the CF edge is selected at the step instead of the actual edge.</li>
+                <li>An Edge classifier predicts the intentions of each edge in both actual and CF routes, 
+                    where the classifier is trained on the datasets labeled by a rule-based annotation and is used for determining the intention more quickly than the annotation.
+                </li>
+                <li>The influence of actual and CF edges are quantitatively compared based on representative values such as route length and ratio of each edge intention.</li>
+                <li>A Large Language Model (LLM) generates an explanation text while taking into account the comparison results in the input context. 
+                    The generated explanation justifies why the VRP solver selected the actual edge rather than the CF edge at the step by comparing their pros and cons. 
+                </li>
+              </ol>
+              Our proposal includes the above framework/pipline, a many-to-many sequential edge classifier, a new class-balanced loss function, edge annotation strategy, and LLM-based explanation generation.
+            </p>
+          </div>
+          <img src="static/images/route_explainer_trim.png" width="100%" height="100%" alt="The pipeline of RouteExplainer"><br>
+          Fig.1: The pipeline of RouteExplainer.
+        </div>
+
+        <!-- Edge classifier -->
+        <div class="slide">
+          <span class="slider-navigation-next" onclick="currentSlide(3)">&thinsp;▶</span>
+          <span class="slider-navigation-previous is-centered" onclick="currentSlide(1)">◀</span>
+          <h2 class="title is-3">A many-to-many sequential edge classifier</h2>
+          <div class="content has-text-justified">
+            <p>
+              We formulate predicting the intentions of each edge as a many-to-many sequential classification, where the edge classifier takes a route (i.e., sequence of edges) and 
+              sequentially classifies each edge. We here propose a Transformer-based edge classifier, which consists of a node encoder, edge encoder, and classification decoder (Fig.2).
+              The node encoder first converts input features into higher-dimensional embeddings with a linear projection and the subsequent Transformer encoders <a href="#ref14" class="blue-text">[14]</a> (without positional encoding).
+              Then, the edge encoder generates edge embeddings by concatenating three vectors: two node embeddings of the end of the edge and global states (e.g., current time). 
+              In the classification decoder, Causal Transformer encoders (without positional encoding) take the edge embeddings arranged in the route order as input tokens, and then generate the final embeddings of each edge.
+              After a linear projection adjusts the dimension of the final embedding to the number of classes (intention types), 
+              the decoder finally outputs the probabilities of each class of each edge by applying the Softmax to the adjusted embeddings.
+              <br>
+              <br>
+              We prepare datasets labeled by a rule-based annotation and train the edge classifier on the datasets in supervised learning.
+              Some of our datasets have step-wise class imbalanceness such that a class (intention) is majority in the early steps, whereas another class becomes majority as the steps progress.
+              Existing class-balanced loss function cannot handle this because they consider only batch-level imbalanceness.
+              To address this, we propose a step-wise class-balanced cross entropy, which considers step-wise class imbalanceness by separately computing balancing weights at each step.
+            </p>
+          </div>
+          <img src="static/images/edge_classifier.png" width="80%" height="80%" class="is-centered" alt="A many-to-many edge classifer"><br>
+          Fir.2: Overview of Edge classifier
+        </div>
+
+        <!-- Edge annotation -->
+        <div class="slide">
+          <span class="slider-navigation-next" onclick="currentSlide(4)">&thinsp;▶</span>
+          <span class="slider-navigation-previous" onclick="currentSlide(2)">◀</span>
+          <h2 class="title is-3">A rule-based edge annotation</h2>
+          <div class="content has-text-justified">
+            <p>
+              In this work, we propose a rule-based edge annotation.
+              In particular, we here describe the rule for Traveling Salesman Problem with Time Windows (TSPTW), 
+              where we assume that each edge is labeled as either "prioritizing route length" or "prioritizing time windows".
+              Fig.3 shows an example of the annotation in a TSPTW route (top of Fig.3) and the general edge annotation algorithm (bottom of Fig.3).
+              Let's consider the example of labeling the red edge in the TSPTW route. 
+              A VRP solver first solves VRP that removes constratins (i.e., TSPTW - time windows = TSP) with past edges (i.e., edges before the red edge) fixed.
+              Then, we compare the red edge in the TSPTW route and the edge at the same step in the TSP route (i.e., the green edge).
+              If they are identical, the red edge is labeled as "prioritizing route length", otherwise, "prioritizing time windows".
+              Intuitively, the green edge is optimal when only route length is considered, 
+              so if the red edge matches it, the red edge is considered to prioritize route length. 
+              Otherwise, the red edge is considered to have changed from the green edge to adhere to time windows, rather than optimizing route length. 
+              See rules for other VRPs in our paper. 
+            </p>
+          </div>
+          <img src="static/images/annotation.png" width="75%" height="75%" alt="The pipeline of RouteExplainer"><br>
+          Fig.3: Edge annotation for TSPTW (top) and general edge anotation algorithm (bottom).
+        </div>
+
+        <!-- Explanation generation -->
+        <div class="slide">
+          <span class="slider-navigation-next" onclick="currentSlide(5)">&thinsp;▶</span>
+          <span class="slider-navigation-previous" onclick="currentSlide(3)">◀</span>
+          <h2 class="title is-3">Explanation generation</h2>
+          <div class="content has-text-justified">
+            <p>
+              RouteExplainer justifies the actual edge by comparing the influences of the actual and CF edges.
+              To quantify the influence of an edge while considering its impact on the subsequent edges, 
+              we introduce Edge Influence Model (EIM), which is an extension of the actual influence model (AIM) <a href="#ref13" class="blue-text">[13]</a> for VRP.
+              AIM is an extension of Structural Causal Model (SCM) <a href="#ref15" class="blue-text">[15]</a> for actions in reinforcement learning, 
+              which replaces variables and directed edges in a Directed Acycle Graph (DAG) with environmental states and actions, respectively (l.h.s of Fig.4).
+              The authors <a href="#ref13" class="blue-text">[13]</a> leverage AIM to generate counterfactual explanation for a specific action taken by a model,
+              where that action is justified by comparing the subsequent states of that action and those of a counterfactual action.
+              <br>
+              <br>
+              Rethinking a route as the sequence of actions (i.e., edges/movements between two nodes), 
+              we extend AIM to EIM, which replaces environmental states and actions in AIM with nodes and edges in a VRP instance (r.h.s of Fig.4 ).
+              Each node in EIM possesses environmental states when it is visited (we name them <i>global states</i>).
+              For TSPTW, the global state is the intermidiate route length/travel time, 
+              and the structural equation between the previous and next global state is defined as \(S_{(i, t+1)}=S_{(j, t)}+d(v_{i}, v_{j})\),
+              where \(S_{(i, t)}\) is the global state of the \(i\)-th node when visited at step \(t\) and \(d(v_{i}, v_{j})\) is the route length/travel time of the edge between \(i,j\)-th nodes.
+              The set of causal paths in EIM (red pahts in r.h.s of Fig. ) corresponds to a route.
+              <br>
+              <br>
+              Based on EIM, we define the influence of the edge at step \(t\) in a route as the tuple of the subsequent global states and edge intentions to that edge:
+              \(\boldsymbol{I}_{e_t} = \left(S_{(\pi_{t+1}, t+1)}, \hat{y}_{t+1}, S_{(\pi_{t+2}, t+2)},\dots, \hat{y}_{T-1}, S_{(\pi_{T}, T)}\right)\),
+              where \(\hat{y}_{t}\) is the intention of the edge at step \(t\).
+              To make this more understandable by humans, we further define the respresentative values that reflects \(\boldsymbol{I}_{e_t}\) at the minimum necessary.
+              For TSPTW, we select four representative values calculated from \(\boldsymbol{I}_{e_t}\): the shor-term effect \(S_{(\pi_{t+1}, t+1)}\), long-term effect \(S_{(\pi_{T}, T)}\), intention ratio, and infeasibility ratio.
+              RouteExplainer explains the influence of the actual edge by comparing (taking difference of) the representative values of the actual and CF edges. 
+              See our paper for more detailed formulation.
+              In the next slide, we will describe how to generate the final explanation text with LLMs.
+            </p>
+          </div>
+          <img src="static/images/EIM.png" width="100%" height="100%" alt="The pipeline of RouteExplainer">
+          Fig.4: Action Influence Model v.s. Edge Infuluence Model (ours).
+        </div>
+
+        <!-- IN-context learning -->
+        <div class="slide">
+          <!-- <span class="slider-navigation-next" onclick="currentSlide(1)">&thinsp;▶</span> -->
+          <span class="slider-navigation-previous" onclick="currentSlide(4)">◀</span>
+          <h2 class="title is-3">In-context learning on GPT-4</h2>
+          <div class="content has-text-justified">
+            <p>
+              RouteExplainer leverages an LLM for generating the final explanation text.
+              We use GPT-4 without additional finetuning and acomplish the explanation generation by in-context learning.
+              Fig.5 shows the system prompt for generating explanation based on RouteExplainer.
+              The comparion of representative values of the actual and CF edges' influences are embedded to <tt>{comparison_results}</tt> in the system prompt, 
+              of which format is the same as the example in the system prompt.
+              The system prompt first clarifies the task here with the description of RouteExplainer and the terminology.
+              It then instructs the LLM to justify the actual edge while mentioning the pros and cons of the actual and CF edges, 
+              which are determined by the comparison of the four representative values of those edges.
+              For example, the smaller short/long-term effect (i.e., intermediate/total travel time) and # unvisited nodes (i.e., infeasibility ratio), the better. 
+              Subsequent class ratio (i.e., intention ratio) is basically a neutral metric, but it gives us the insights of the edge infuluence.
+              The supplementary information allows the LLM to make the pros and cons more detail while relating them to that information.
+              Prompt-engineering techniques used here include role-play prompting (clarifying the task), 
+              one-shot prompting (showing an example of the expected output), and optimizing the placement of prompts (placing important prompts at the beginning or end of the whole prompt).
+            </p>
+          </div>
+          <img src="static/images/system_prompt.png" width="100%" height="100%" alt="The pipeline of RouteExplainer"><br>
+          Fig.5: Our system prompt for generating explanation text.
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Framework -->
+
+<!-- Algorithm-->
+<section class="section hero">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Evaluation</h2>
+          <div class="content has-text-justified">
+            <p>
+              We quantitatively evaluate our edge classifier on Actual-Route-Datasets and CF-Route-Datasets, 
+              which include the labels of each edge in actual routes and CF routes of different sizes of four VRPs: 
+              Traveling Salesman Problem with Time Windows (TSPTW), Prize Collecting TSP (PCTSP), PCTSP with Time Windows (PCTSPTW), and Capacitated VRP (CVRP).
+              Table 1 shows the Macro-F1 (MF1) and calculation time of edge classification in each problem, where
+              LKH, Concorde, and ORTools (the annotation strategy with different sovlers) are baselines and \(\rm{EC}^*_*\) is the familiy of our edge classifier 
+              (second block includes model ablations and the third one includes variants of loss functions).
+              In short, our edge classifer outperforms baselines by a large margin in terms of calculation time while maintaining reasonable MF1 (e.g., 85-90%) on most problems.
+              The results demonstrates its capability for handling a huge number of requests in real-time applications.
+              See our paper for more datails of this evaluation, including the annotation strategy, dataset statics, baselines, and ablations. 
+            </p>
+          </div>
+          <img src="static/images/table.png" width="80%" height="80%" alt="The results of quantitative evaluation">
+          <div class="content has-text-justified">
+            <p>
+              <br>
+              We also conduct a qualitative evaluation of RouteExplainer on a Kyoto tour (case study of TSPTW).
+              Fig.6 shows the explanation generated by RouteExplainer, which includes an explanation text generated by GPT-4 and visual infomation (i.e., a route and intentions of each edge in the route) of the actual and CF routes.
+              It successfully explains the importance of the actual edge while mentioning the difference between the actual and CF edges regarding their short/long-time effects and impact on the intentions of the subsequent edges.
+              Furthermore, GPT-4 enables incorporating information of each destination in the explanation (e.g., the explanation points out the losses of attenting a guided tour and taking lunch from not visiting the Kyoto Geishinkan). <br>
+              <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank">Please experience our framework for yourself at Hugging Face Spaces (OpenAI API key is required)!</a>
+            </p>
+          </div>
+          <img src="static/images/explanation.png" width="100%" height="100%" alt="The results of qualitative evaluation"><br>
+          Fig.6: An explanation generated by RouteExplainer.
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- End Algorithm -->
+
+<!-- Framework-->
+<section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">What's next?</h2>
+          <div class="content has-text-justified">
+            <p>
+              In this work, we proposed the first explanation framework for VRP, and opened the new field of "explanaibily for VRP".
+              On the other hand, some limitations remain, 
+              including the accuracy issue of the edge classifier in some VRPs and simple edge intentions annotated by a rule.
+              We will address these limitaions by increasing data/parameters and leveraging LLM-powered edge annotation.
+              Furthermore, we plan to apply our framework to more general LLM applications, so please stay tuned!
+              We also welcome your extension of this work to various applications :)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- End Framework -->
+
+<!-- Algorithm-->
+<section class="section hero">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Citation </h2>
+          <div class="content has-text-justified">
+            If you find this work useful, please cite our paper as follows:
+            <pre><code>@article{dkiku2024routeexplainer,
+  author = {Daisuke Kikuta and Hiroki Ikeuchi and Kengo Tajiri and Yuusuke Nakano},
+  title = {RouteExplainer: An Explanation Framework for Vehicle Routing Problem},
+  year = 2024,
+  journal = {arXiv preprint arXiv:}
+  url = {https://arxiv.org/abs/}
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- End Algorithm -->
+
+
+<!-- Framework-->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Reference</h2>
+        <div class="content has-text-justified">
+          <p>
+            Here is the part of works related to our framework. See "Related Work" in our paper for all excellent related works.
+            <ol>
+              <li id="ref1">Dantzig, G.B., Ramser, J.H.: The truck dispatching problem. Management Science 6(1), 80–91 (1959). </li>
+              <li id="ref2">Dumas, Y., Desrosiers, J., Gelinas, E., Solomon, M.M.: An optimal algorithm for the traveling salesman problem with time windows. Operations Research 43(2), 367–371 (1995). </li>
+              <li id="ref3">Lopez, L., Carter, M.W., Gendreau, M.: The hot strip mill production scheduling problem: A tabu search approach. European Journal of Operational Research 106(2-3), 317–335 (1998).</li>
+              <li id="ref4">Pessoa, A.A., Sadykov, R., Uchoa, E., Vanderbeck, F.: A Generic Exact Solver for Vehicle Routing and Related Problems. Mathematical Programming 183, 483–523 (2020).</li>
+              <li id="ref5">Helsgaun, K.: An extension of the lin-kernighan-helsgaun tsp solver for constrained traveling salesman and vehicle routing problems: Technical report (2017).</li>
+              
+              <li id="ref6">Vinyals, O., Fortunato, M., Jaitly, N.: Pointer networks. In: Advances in Neural Information Processing Systems. vol. 28 (2015).</li>
+              <li id="ref7">Bello, I., Pham, H., Le, Q.V., Norouzi, M., Bengio, S.: Neural combinatorial optimization with reinforcement learning (2017).</li>
+              <li id="ref8">Kool, W., van Hoof, H., Welling, M.: Attention, learn to solve routing problems! In: International Conference on Learning Representations (2019).</li>
+              <li id="ref9">Joshi, C.K., Laurent, T., Bresson, X.: An efficient graph convolutional network technique for the travelling salesman problem (2019).</li>
+
+              <li id="ref10">Kool, W., van Hoof, H., Gromicho, J., Welling, M.: Deep policy dynamic programming for vehicle routing problems (2021).</li>
+              <li id="ref11">Li, S., Yan, Z., Wu, C.: Learning to delegate for large-scale vehicle routing. In: Thirty-Fifth Conference on Neural Information Processing Systems (2021).</li>
+              <li id="ref12">Xin, L., Song, W., Cao, Z., Zhang, J.: Neurolkh: Combining deep learning model with lin-kernighan-helsgaun heuristic for solving the traveling salesman problem. In: Advances in Neural Information Processing Systems. vol. 34 (2021).</li>
+
+              <li id="ref13">Madumal, P., Miller, T., Sonenberg, L., Vetere, F.: Explainable reinforcement learning through a causal lens. In: AAAI Conference on Artificial Intelligence (2019).</li>
+              <li id="ref14"> Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., Kaiser, L.u., Polosukhin, I.: Attention is all you need. In: Advances in Neural Information Processing Systems. vol. 30 (2017).</li>
+              <li id="ref15">Halpern, J.Y., Pearl, J.: Causes and explanations: A structural-model approach. part i: Causes. The British Journal for the Philosophy of Science 56(4), 843–887 (2005).</li>
+            </ol>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Framework -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            We modified several components from the original template, so we would appreciate it if you would cite this page in your footer when you copy and use this modified template.
+            Please never forget to cite the original ones as well at that time.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+<!-- End of Statcounter Code -->
+
+</body>
+</html>

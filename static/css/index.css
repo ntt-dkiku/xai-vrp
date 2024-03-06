@@ -1,0 +1,262 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.tag {
+  font-size:16px;
+  line-height:normal;
+}
+
+.publication-title {
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-header .hero-body {
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+   color: hsl(207, 81%, 44%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+  /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@media (min-width:800px){
+  .results-carousel{
+    width: 100%;
+      display:flex
+  }
+}
+
+
+@media (max-width:800px){
+  .results-carousel{
+    width: 100%;
+    display:flex
+  }
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  padding: 20px;
+  font-size: 0;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+.slider-pagination .slider-page {
+  background: #000000;
+}
+
+.eql-cntrb { 
+  font-size: smaller;
+}
+
+.blue-text {
+  color: hsl(207, 81%, 44%) !important;
+}
+
+/* img {
+  max-width: 100%;
+  height: auto;
+} */
+
+.slider {
+  position: relative;
+}
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 99%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  cursor:pointer;
+}
+
+.dot:hover {
+  background-color: #717171;
+  -webkit-transform:scale(1.2);
+  transform:scale(1.2);
+}
+
+.dot.active {
+  background-color: hsl(207, 81%, 44%);
+  -webkit-transform:scale(1.2);
+  transform:scale(1.2);
+}
+
+/* レスポンシブなスタイリングも追加可能です */
+@media screen and (max-width: 768px) {
+  .dot {
+    height: 10px;
+    width: 10px;
+  }
+}
+
+.slider-navigation-next,.slider-navigation-previous{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:absolute;
+  width:42px;
+  height:42px;
+  /* height: 100%; */
+  background:#fff center center no-repeat;
+  background-size:20px 20px;
+  border:1px solid #fff;
+  border-radius:25091983px;
+  /* border-radius: 5px; */
+  box-shadow:0 2px 5px #3232321a;
+  top:50%;
+  margin-top:-20px;
+  /* top: 0%; */
+  left:0;
+  cursor:pointer;
+  transition:opacity .3s,-webkit-transform .3s;
+  transition:transform .3s,opacity .3s;
+  transition:transform .3s,opacity .3s,-webkit-transform .3s;
+  opacity: 0.5;
+}
+
+.slider-navigation-next:hover,.slider-navigation-previous:hover{
+  -webkit-transform:scale(1.2);
+  transform:scale(1.2);
+  opacity: 1;
+}
+
+.slider-navigation-next.is-hidden,.slider-navigation-previous.is-hidden{
+  display:none;
+  opacity:0
+}
+
+.slider-navigation-next svg,.slider-navigation-previous svg{
+  width:25%
+}
+
+.slider-navigation-next{
+  left:auto;
+  right:0;
+  background:#fff center center no-repeat;
+  background-size:20px 20px
+}
